@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-zyte",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Zyte API MCP — unified web fetch + AI extraction (zyte.com)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-0f19f7c66bc275bee03e7adbc8078bcab447454a434a24116fe9100b311a1f3a",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-34d68110ec99fd497a776baf9bb727fb966d376bb28fb452975929f5305fdeb0",
+    "sourceCommit": "2cb50b368da3267446f2b6f6a3ddbd3d0eed3d73"
   }
 }

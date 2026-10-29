@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-zyte",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Zyte API MCP — unified web fetch + AI extraction (zyte.com)",
   "type": "module",
   "main": "lib/index.js",

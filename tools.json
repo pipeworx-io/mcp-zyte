@@ -1,0 +1,77 @@
+[
+  {
+    "name": "zyte_fetch",
+    "description": "Fetch a web page through Zyte API and return its content. By default returns the raw HTTP response body (decoded to text). For JS-heavy sites that need a real browser, pass render:true to get browser-rendered HTML instead. Example: zyte_fetch({ url: \"https://example.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL to fetch, e.g. \"https://example.com\""
+        },
+        "render": {
+          "type": "boolean",
+          "description": "When true, load the page in a headless browser and return the rendered HTML (browserHtml). Use for JavaScript-heavy sites. Default false (fast raw HTTP fetch)."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Zyte API key (get one at https://app.zyte.com)"
+        }
+      },
+      "required": [
+        "url",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "zyte_extract",
+    "description": "AI-powered automatic extraction of structured data from a web page. Set type to 'product' for e-commerce product pages (name, price, currency, images, SKU, availability...) or 'article' for news/blog pages (headline, author, date, body text...). Example: zyte_extract({ url: \"https://shop.example.com/item/123\", type: \"product\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL of the product or article page to extract"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "product",
+            "article"
+          ],
+          "description": "What to extract: 'product' (e-commerce) or 'article' (news/blog). Default 'product'."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Zyte API key"
+        }
+      },
+      "required": [
+        "url",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "zyte_screenshot",
+    "description": "Capture a screenshot of a web page via Zyte API (rendered in a headless browser). Returns metadata about the base64-encoded PNG (its length) rather than inlining the full blob. Example: zyte_screenshot({ url: \"https://example.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL to screenshot"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Zyte API key"
+        }
+      },
+      "required": [
+        "url",
+        "_apiKey"
+      ]
+    }
+  }
+]
